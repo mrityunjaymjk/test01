@@ -1,0 +1,36 @@
+<template>
+    <div style="display: flex;">
+        <div >
+            <p title="Search by Account Name">Filter by Account...</p>
+            <lightning-input type="text" placeholder="Search by Account Name"></lightning-input>
+        </div>
+        <div>
+            <p>Filter by Industry</p>
+            <lightning-input type="text" placeholder="Search by Industry" ></lightning-input>
+        </div>
+        <div>
+            <p title="Filter by Annual Revenew">Filter by Annual...</p>
+            <lightning-input type="number" placeholder="Search by Annual Revenew" onkeypress={handleEnter}></lightning-input>
+        </div>
+        <div>
+            <p>Filter by Owner</p>
+            <lightning-input type="text" placeholder="Search by Owner" onkeypress={handleEnter}></lightning-input>
+        </div>
+        <div>
+            <p>Filter by Phone</p>
+            <lightning-input type="number" placeholder="Search by Phone" onkeypress={handleEnter}></lightning-input>
+        </div>
+        <div>
+            <p>Filter by Rating</p>
+            <lightning-input type="text" placeholder="Search by Rating" onkeypress={handleEnter}></lightning-input>
+        </div>
+        <div>
+            <p>Filter by Type</p>
+            <lightning-input type="text" placeholder="Search by Type" onkeypress={handleEnter}></lightning-input>
+        </div>
+        <div>
+            <p title="Filter by Number of Employee">Filter by Number...</p>
+            <lightning-input type="number" placeholder="Search by Number of Employee" onkeypress={handleEnter}></lightning-input>
+        </div>
+    </div>
+</template>

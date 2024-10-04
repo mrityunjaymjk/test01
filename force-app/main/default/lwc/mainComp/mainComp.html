@@ -1,0 +1,49 @@
+<template>
+    <div style="display: flex;">
+        <!-- <c-filter-comp></c-filter-comp> -->
+        <div >
+            <p title="Search by Account Name">Filter by Account...</p>
+            <lightning-input type="text" value={accSearch} onchange={handleSearchChange} onkeydown={handleKeyPress} placeholder="Search by Account Name"></lightning-input>
+        </div>
+        <div>
+            <p title="Search by Industry">Filter by Industry</p>
+            <lightning-input type="text"  value={indusSearch} onchange={handleSearchChangeIndus} onkeydown={handleKeyPressIndus} placeholder="Search by Industry" ></lightning-input>
+        </div>
+        <div>
+            <p title="Filter by Annual Revenew">Filter by Annual...</p>
+            <lightning-input type="number" value={annualRevenewSearch} onchange={handleRevenueChange} onkeydown={handleKeyPressRevenew} placeholder="Search by Annual Revenew" ></lightning-input>
+        </div>
+        <div>
+            <p>Filter by Type</p>
+            <lightning-input type="text" value={typeSearch} onchange={handleTypeChange} onkeydown={handleKeyPressType} placeholder="Search by Type" ></lightning-input>
+        </div>
+        <div>
+            <p>Filter by Owner</p>
+            <lightning-input type="text" placeholder="Search by Owner" value={ownerSearch} onchange={handleOwnerChange} onkeydown={handleKeyPressOwner}></lightning-input>
+        </div>
+        <div>
+            <p>Filter by Phone</p>
+            <lightning-input type="number" placeholder="Search by Phone" value={phoneSearch} onchange={handlePhoneChange} onkeydown={handleKeyPressPhone}></lightning-input>
+        </div>
+        <div>
+            <p>Filter by Rating</p>
+            <lightning-input type="text" placeholder="Search by Rating" value={ratingSearch} onchange={handleRatingChange}
+            onkeydown={handleKeyPressRating}></lightning-input>
+        </div>
+    </div>
+    <div>
+        <lightning-card>
+            <lightning-datatable
+                key-field="Id"
+                data={accounts}
+                hide-checkbox-column
+                columns={columns}>
+            </lightning-datatable>
+        </lightning-card>
+    </div>
+    <div>
+        <lightning-button variant="brand" label="Previous" title="Go Previous" onclick={handlePrevious} class="slds-m-left_x-small"></lightning-button>
+        <span class="vcenter currentpage">  You Are On Page:   {currentPage}</span>
+        <lightning-button variant="brand" label="Next" title="Go Next" onclick={handleNext} class="slds-m-left_x-small"></lightning-button>
+    </div>
+</template>
